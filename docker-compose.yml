@@ -10,7 +10,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - "66:80"
-    container_name: camp_symf_cont
+    container_name: mce_camp_symf_cont
     depends_on:
       - database
     restart: always
@@ -24,7 +24,7 @@ services:
     image: mysql
     ports:
       - "3306:3336"
-    container_name: camp_symf_db
+    container_name: mce_camp_symf_db
     volumes:
       - db_camp:/var/lib/mysql
     restart: always
@@ -38,7 +38,7 @@ services:
   # phpmyadmin Service
   phpmyadmin:
     image: phpmyadmin
-    container_name: camp_symf_phpad
+    container_name: mce_camp_symf_phpad
     depends_on:
       - database
     restart: always
