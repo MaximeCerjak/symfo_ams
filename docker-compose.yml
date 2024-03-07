@@ -23,7 +23,7 @@ services:
   database:
     image: mysql
     ports:
-      - "3306:3336"
+      - "3336:3336"
     container_name: mcerjak_camp_symf_db
     volumes:
       - db_camp:/var/lib/mysql
